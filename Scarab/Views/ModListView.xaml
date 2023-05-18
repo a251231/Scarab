@@ -107,7 +107,7 @@
             DockPanel.Dock="Top"
             BorderThickness="0"
             Margin="6 6"
-            Text="{Binding 搜索}" />
+            Text="{Binding Search}" />
 
         <Separator
             DockPanel.Dock="Top"
