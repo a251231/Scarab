@@ -37,22 +37,22 @@
                 </Style>
             </Menu.Styles>
 
-            <MenuItem Header="{ext:Localize XAML_ModsFilter_All}" Command="{Binding SelectAll}" DockPanel.Dock="Top" />
+            <MenuItem Header="{ext:Localize XAML_Mods文件_全部}" Command="{Binding SelectAll}" DockPanel.Dock="Top" />
             <MenuItem Header="-" DockPanel.Dock="Top" />
-            <MenuItem Header="{ext:Localize XAML_ModsFilter_Installed}" Command="{Binding SelectInstalled}" DockPanel.Dock="Top" />
+            <MenuItem Header="{ext:Localize XAML_Mods文件_安装}" Command="{Binding SelectInstalled}" DockPanel.Dock="Top" />
             <MenuItem Header="-" DockPanel.Dock="Top" />
-            <MenuItem Header="{ext:Localize XAML_ModsFilter_Enabled}" Command="{Binding SelectEnabled}" DockPanel.Dock="Top" />
+            <MenuItem Header="{ext:Localize XAML_Mods文件_开启}" Command="{Binding SelectEnabled}" DockPanel.Dock="Top" />
             <MenuItem Header="-" DockPanel.Dock="Top" />
-            <MenuItem Header="{ext:Localize XAML_ModsFilter_OutOfDate}" Command="{Binding SelectUnupdated}" DockPanel.Dock="Top" />
+            <MenuItem Header="{ext:Localize XAML_Mods文件__其他组织者}" Command="{Binding SelectUnupdated}" DockPanel.Dock="Top" />
             
             <MenuItem
                 Command="{Binding ChangePath}"
-                Header="{ext:Localize XAML_ChangPath}"
+                Header="{ext:Localize XAML_更改路径}"
                 DockPanel.Dock="Bottom"
                 VerticalAlignment="Bottom" />
             <MenuItem
                 Command="{Binding OpenModsDirectory}"
-                Header="{ext:Localize XAML_OpenMods}"
+                Header="{ext:Localize XAML_打开Mods}"
                 DockPanel.Dock="Bottom"
                 VerticalAlignment="Bottom" />
             <MenuItem
@@ -69,12 +69,12 @@
                 VerticalAlignment="Bottom" />
             <MenuItem 
                 Command="{Binding UpdateUnupdated}" 
-                Header="{ext:Localize XAML_ModsFilter_OutOfDate_Update}"
+                Header="{ext:Localize XAML_Mods文件_导出数据_更新}"
                 DockPanel.Dock="Bottom"
                 IsEnabled="{Binding CanUpdateAll}" />
             <MenuItem
                 Command="{Binding Donate}"
-                Header="{ext:Localize XAML_Donate}"
+                Header="{ext:Localize XAML_捐赠}"
                 DockPanel.Dock="Bottom"
                 VerticalAlignment="Bottom" />
         </Menu>
@@ -102,12 +102,12 @@
 
         <TextBox
             x:Name="Search"
-            Name="Search"
+            Name="搜索"
             Watermark="{ext:Localize XAML_SearchMark}"
             DockPanel.Dock="Top"
             BorderThickness="0"
             Margin="6 6"
-            Text="{Binding Search}" />
+            Text="{Binding 搜索}" />
 
         <Separator
             DockPanel.Dock="Top"
@@ -141,7 +141,7 @@
                             
                             <Expander Grid.Column="0" Grid.ColumnSpan="4">
                                 <Expander.Header>
-                                    <TextBlock Text="{Binding Name}" TextWrapping="Wrap">
+                                    <TextBlock Text="{Binding 名称}" TextWrapping="Wrap">
                                         <TextBlock.Resources>
                                             <sys:Double x:Key="decrement">-20.0</sys:Double>
                                         </TextBlock.Resources>
@@ -163,7 +163,7 @@
                                 </Expander.Header>
                                 
                                 <StackPanel Margin="12 0 0 0">
-                                    <TextBlock Text="{Binding Description}" TextWrapping="Wrap" Margin="0 4 4 0"/>
+                                    <TextBlock Text="{Binding 描述}" TextWrapping="Wrap" Margin="0 4 4 0"/>
 
                                     <TextBlock Text="{ext:Localize XAML_Repository}" FontWeight="Bold" />
                                     <StackPanel Orientation="Horizontal">
@@ -180,11 +180,11 @@
                                         </TextBlock>
                                     </StackPanel>
 
-                                    <TextBlock Text="{ext:Localize XAML_Version}" FontWeight="Bold" />
+                                    <TextBlock Text="{ext:Localize XAML_版本}" FontWeight="Bold" />
                                     <StackPanel Orientation="Horizontal">
                                         <TextBlock Text="{Binding VersionText}" />
                                         <TextBlock
-                                            Text="{Binding UpdateText}"
+                                            Text="{Binding 更新文本}"
                                             IsVisible="{Binding UpdateAvailable}"
                                             Foreground="{DynamicResource Highlight}" 
                                             Margin="4 0 0 0" 
